@@ -6,7 +6,6 @@ const composeRoutes = require('./routes')
 
 const app = express()
 
-const PORT = process.env.PORT || 5000
 applyMiddleware(app)
 composeRoutes(app)
-app.listen(PORT)
+app.listen(process.env.REACT_APP_SERVER_PORT)
