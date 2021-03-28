@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import Initialize from '../screens/Initialize'
+import Initialize from '../common/Initialize'
 import Terrain from './Terrain'
 import Track from '../info/Track'
 import Icon from '../common/Icon'
@@ -56,6 +56,7 @@ const Visualizer = ({ tick = () => {} } = {}) => {
   return (
     <>
       <Icon pulse={playing} />
+
       <Initialize
         initialized={initialized}
         connected={connected}
