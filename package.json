@@ -32,7 +32,7 @@
 
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm install && npm run build"
+    "heroku-postbuild": "npm install -g serve"
 
   },
   "eslintConfig": {
