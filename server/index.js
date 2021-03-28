@@ -6,7 +6,7 @@ const composeRoutes = require('./routes')
 
 const app = express()
 
-const PORT = process.env.PORT || 6868
+const PORT = process.env.PORT || 5000
 applyMiddleware(app)
 composeRoutes(app)
 app.listen(PORT)
