@@ -1,16 +1,16 @@
-import { loadExternalScript } from '../util/dom'
-import Observe from '../util/observe'
+import { loadExternalScript } from '../utils/dom'
+import Observe from '../utils/observe'
 import axios from 'axios'
 import scaleLinear from 'd3-scale/src/linear'
 import interpolateNumber from 'd3-interpolate/src/number'
 import mean from 'd3-array/src/mean'
 import min from 'd3-array/src/min'
-import * as Cookies from '../util/cookies'
-import ease from '../util/ease'
+import * as Cookies from '../utils/cookies'
+import ease from '../utils/ease'
 
 export default class Sync {
   constructor({
-    spotifyConnectDeviceName = 'Web Playback Sandbox',
+    spotifyConnectDeviceName = 'Vi',
     playerNamespace = 'SPOTIFY_PLAYER',
     tick = () => {},
     onPlayerInitialized = () => {},
@@ -72,7 +72,9 @@ export default class Sync {
       `${process.env.REACT_APP_PROJECT_ROOT}/api/authentication/refresh?token=${this.state.refreshToken}`
     ) // eslint-disable-line
     this.state.accessToken = data.access_token
-    Cookies.set(process.env.REACT_APP_ACCESS_TOKEN, this.state.accessToken) // eslint-disable-line
+    Cookies.set(process.env.REACT_APP_ACCESS_TOKEN, this.state.accessToken, {
+      expire: 0,
+    }) // eslint-disable-line
     callback()
   }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Initialize from '../screens/Initialize'
 import Terrain from './Terrain'
-import Track from '../stats/Track'
+import Track from '../info/Track'
 import Icon from '../common/Icon'
 import Sync from '../../core/sync'
 

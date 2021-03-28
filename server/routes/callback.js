@@ -27,13 +27,17 @@ module.exports = (app) => {
     }
 
     request.post(config, (error, response, { access_token, refresh_token }) => {
-      res.cookie(process.env.REACT_APP_ACCESS_TOKEN, access_token)
-      res.cookie(process.env.REACT_APP_REFRESH_TOKEN, refresh_token)
-      res.cookie(process.env.REACT_APP_REFRESH_CODE, code)
+      res.cookie(process.env.REACT_APP_ACCESS_TOKEN, access_token, {
+        expire: 0,
+      })
+      res.cookie(process.env.REACT_APP_REFRESH_TOKEN, refresh_token, {
+        expire: 0,
+      })
+      res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expire: 0 })
       if (process.env.NODE_ENV === 'production') {
         res.redirect(process.env.REACT_APP_SERVER_URL + '/spotify')
       } else {
-        res.redirect('http://localhost:3000')
+        res.redirect('http://localhost:3000/')
       }
     })
   })
