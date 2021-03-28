@@ -35,7 +35,7 @@ module.exports = (app) => {
       })
       res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expires: 0 })
       if (process.env.NODE_ENV === 'production') {
-        res.redirect(process.env.REACT_APP_SERVER_URL + '/spotify')
+        res.redirect(process.env.REACT_APP_SERVER_URL + '/visualizer')
       } else {
         res.redirect('http://localhost:3000/visualizer')
       }
