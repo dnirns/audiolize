@@ -92,7 +92,7 @@ const Terrain = ({ volume, sync }) => {
         }
         yoff += 0.1
       }
-      p.background(0)
+      p.background('#191414')
 
       let strokeColor
 

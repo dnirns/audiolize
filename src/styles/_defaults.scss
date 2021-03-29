@@ -1,0 +1,38 @@
+@import 'colors';
+
+html,
+body {
+  font-family: 'DotGothic16', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $spotify-black;
+  color: white;
+  overflow: hidden;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition-duration: 200ms;
+}
+a:hover {
+  color: $spotify-green;
+  font-weight: bold;
+  transition-property: all;
+  transform: scale(1.1);
+}
+
+.button {
+  background-color: $spotify-green;
+  color: white;
+  border: none;
+  padding: 0.8em 1.6em;
+  margin: 1.2em;
+  font-family: 'DotGothic16', sans-serif;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.button:hover {
+  cursor: pointer;
+}

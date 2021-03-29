@@ -1,17 +1,8 @@
+@import 'defaults';
 @import 'colors';
 @import 'mixins';
 @import 'animations';
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-
-html,
-body {
-  font-family: 'DotGothic16', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  color: white;
-  overflow: hidden;
-}
 
 .container {
   width: 100%;
@@ -25,21 +16,18 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding: 0.8em 0;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-a:hover {
-  opacity: 0.8;
+  padding-top: 1.2em;
+  z-index: 2;
 }
 
 .home {
   height: 100vh;
-  padding-top: 8em;
   align-items: center;
+  justify-content: center;
+}
+
+.home-main-button {
+  padding-top: 4em;
 }
 
 .initialize {
@@ -49,8 +37,9 @@ a:hover {
 }
 
 .track-info {
-  position: absolute;
-  top: 1em;
+  position: fixed;
+  // top: 1em;
+  padding-top: 4em;
   line-height: 0.2em;
 }
 

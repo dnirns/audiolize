@@ -10,7 +10,7 @@ import ease from '../utilities/ease'
 
 export default class Sync {
   constructor({
-    spotifyConnectDeviceName = 'Vi',
+    spotifyConnectDeviceName = 'Music Visualizer',
     playerNamespace = 'SPOTIFY_PLAYER',
     tick = () => {},
     onPlayerInitialized = () => {},
