@@ -3,13 +3,12 @@ const Initialize = ({ connected, initialized, playing }) => {
     <>
       {!connected && (
         <div className='container initialize'>
-          {!initialized && <p>Initializing...</p>}
+          {!initialized && <p className='text-fade'>Initializing ...</p>}
           {initialized && !connected && (
             <>
-              <p>Player Initialized.</p>
-              <p>
+              <p className='text-fade'>
                 Select 'Music Visualizer' as a Connect device in your Spotify
-                app.
+                app ...
               </p>
             </>
           )}
@@ -18,8 +17,10 @@ const Initialize = ({ connected, initialized, playing }) => {
 
       {connected && !playing && (
         <div className='container initialize'>
-          <p className=''>Playback paused.</p>
-          <p>Press play in your Spotify app to start the Visualizer.</p>
+          <p>Playback paused.</p>
+          <p className='text-fade'>
+            Press play in your Spotify app to start the Visualizer ...
+          </p>
         </div>
       )}
     </>

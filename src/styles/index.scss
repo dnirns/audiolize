@@ -16,7 +16,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  padding-top: 1.2em;
+  top: 20px;
   z-index: 2;
 }
 
@@ -36,18 +36,11 @@
   align-items: center;
 }
 
-.track-info {
-  position: fixed;
-  // top: 1em;
-  padding-top: 4em;
-  line-height: 0.2em;
-}
-
 .spotify-icon {
   position: absolute;
   width: 40px;
-  top: 1em;
-  left: 1em;
+  top: 20px;
+  left: 20px;
   transition-duration: 200ms;
 }
 
@@ -71,6 +64,21 @@
   overflow: hidden;
 }
 
-.track {
+//? TRACK INFO
+
+.track-info {
+  @include flex-centered-all-row;
+  position: fixed;
+  width: 100%;
+  top: 110px;
+  line-height: 1em;
+}
+
+.album-art {
   position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 20px;
+  left: 50%;
+  margin-left: -40px;
 }

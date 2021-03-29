@@ -1,10 +1,19 @@
 const Track = ({ track }) => {
   return (
-    <div className='track-info container'>
-      <p className=''>Now Playing:</p>
-      <p className=''>{track.artists[0].name}</p>
-      <p className=''>{track.name}</p>
-    </div>
+    <>
+      <img
+        className='album-art'
+        alt='album cover'
+        src={track.album.images[0].url}
+      />
+      <div className='track-info'>
+        <div>
+          <p>Now Playing:</p>
+          <p>{track.artists[0].name}</p>
+          <p>{track.name}</p>
+        </div>
+      </div>
+    </>
   )
 }
 

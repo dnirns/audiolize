@@ -13,11 +13,10 @@ body {
 a {
   color: white;
   text-decoration: none;
-  transition-duration: 200ms;
+  transition-duration: 50ms;
 }
 a:hover {
   color: $spotify-green;
-  font-weight: bold;
   transition-property: all;
   transform: scale(1.1);
 }
@@ -29,7 +28,6 @@ a:hover {
   padding: 0.8em 1.6em;
   margin: 1.2em;
   font-family: 'DotGothic16', sans-serif;
-  font-weight: bold;
   font-size: 1.3em;
 }
 

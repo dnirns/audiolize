@@ -1,0 +1,15 @@
+@mixin flex-centered-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-centered-all-row {
+  @include flex-centered-row;
+  text-align: center;
+}
+
+@mixin flex-centered-all-column {
+  @include flex-centered-all-row;
+  flex-direction: column;
+}
