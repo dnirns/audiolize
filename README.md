@@ -6,7 +6,7 @@
 <!-- > NOTE: this project will only run in browsers that support the [Spotify Web Playback SDK](https://developer.spotify.com/documentation/web-playback-sdk/#supported-browsers).
 > `./src/App.js` -->
 
-Currently attempt V2, and still a work in progress.
+Attempt V2, and still a work in progress.
 
 A React, P5.js and Express.js project that creates a music visualizer as a Spotify Connect device, enabling you to authenticate with a Spotify Premium account and get real-time audio visualizations to your music playback.
 
