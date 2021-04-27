@@ -1,4 +1,5 @@
 const request = require('request')
+const PORT = process.env.PORT || 6868
 
 module.exports = (app) => {
   app.get('/api/authentication/callback', async (req, res) => {
@@ -11,7 +12,7 @@ module.exports = (app) => {
       url: 'https://accounts.spotify.com/api/token',
       form: {
         code: code,
-        redirect_uri: process.env.REACT_APP_REDIRECT_URI,
+        redirect_uri: `http://localhost:${PORT}`,
         grant_type: 'authorization_code',
       },
       headers: {

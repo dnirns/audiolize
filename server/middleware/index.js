@@ -3,11 +3,7 @@ const compression = require('compression')
 const express = require('express')
 
 module.exports = (app) => {
-  // app.use(
-  //   bodyParser().urlencoded({
-  //     extended: true,
-  //   })
-  // )
+
 
   app.use(express.urlencoded({ extended: true }))
   app.use(express.json()) // To parse the incoming requests with JSON payloads

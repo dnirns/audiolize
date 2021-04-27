@@ -6,7 +6,7 @@ const Terrain = ({ volume, sync }) => {
     const h = window.innerHeight
     let rows = 0
     let cols = 0
-    const scale = 50
+    const scale = 45
     let terrain = []
     let flyingSpeed = 1
     let tempo = false
@@ -135,12 +135,12 @@ const Terrain = ({ volume, sync }) => {
         : (strokeColor = green3)
 
       p.stroke(strokeColor)
-      p.strokeWeight(4)
+      p.strokeWeight(2)
 
       p.fill(0)
 
       //* rotate sketch along x axis
-      p.rotateX(p.PI / 3.2)
+      p.rotateX(p.PI / 3.8)
 
       //* move sketch to align center after the rotation
       p.translate(-w / 1.4, -h / 2 + 50)
