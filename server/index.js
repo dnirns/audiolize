@@ -9,7 +9,7 @@ const app = express()
 applyMiddleware(app)
 composeRoutes(app)
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.REACT_APP_NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')))
 
   app.get('*', (req, res) =>
