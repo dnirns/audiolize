@@ -1,7 +1,5 @@
-import path from 'path'
-
 require('dotenv').config()
-
+const path = require('path')
 const express = require('express')
 const applyMiddleware = require('./middleware')
 const composeRoutes = require('./routes')
