@@ -12,7 +12,7 @@ module.exports = (app) => {
       url: 'https://accounts.spotify.com/api/token',
       form: {
         code: code,
-        redirect_uri: `http://localhost:${PORT}`,
+        redirect_uri: `http://localhost:${PORT}/api/authentication/callback`,
         grant_type: 'authorization_code',
       },
       headers: {
