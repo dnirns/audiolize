@@ -1,8 +1,16 @@
 const compression = require('compression')
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
+const express = require('express')
 
 module.exports = (app) => {
-  app.use(bodyParser())
+  // app.use(
+  //   bodyParser().urlencoded({
+  //     extended: true,
+  //   })
+  // )
+
+  app.use(express.urlencoded({ extended: true }))
+  app.use(express.json()) // To parse the incoming requests with JSON payloads
   app.use(compression())
 
   app.use((req, res, next) => {
