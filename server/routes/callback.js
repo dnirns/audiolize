@@ -1,5 +1,5 @@
 const request = require('request')
-const PORT = process.env.PORT || 6868
+// const PORT = process.env.PORT || 6868
 
 module.exports = (app) => {
   app.get('/api/authentication/callback', async (req, res) => {
@@ -13,7 +13,7 @@ module.exports = (app) => {
       form: {
         code: code,
 
-        redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback`,
+        redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback/`,
 
         grant_type: 'authorization_code',
       },

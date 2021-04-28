@@ -1,5 +1,5 @@
 const queryString = require('query-string')
-const PORT = process.env.PORT || 6868
+// const PORT = process.env.PORT || 6868
 module.exports = (app) => {
   app.get('/api/authentication/login', (req, res) => {
     const auth_id = Math.random().toString(36).slice(5, 11).toUpperCase()
@@ -10,7 +10,7 @@ module.exports = (app) => {
       ],
       state: auth_id,
       client_id: process.env.REACT_APP_CLIENT_ID,
-      redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback`,
+      redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback/`,
     })
     res.cookie(process.env.REACT_APP_STATE_KEY, auth_id)
     res.redirect('https://accounts.spotify.com/authorize?' + query)
