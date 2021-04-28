@@ -16,5 +16,4 @@ if (process.env.REACT_APP_NODE_ENV === 'production') {
   )
 }
 
-app.listen(PORT)
-console.log('app is running on port: ' + PORT)
+app.listen(PORT, console.log('app is running on port: ' + PORT))
