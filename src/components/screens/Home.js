@@ -11,12 +11,22 @@ const Home = () => {
         <h3>A Spotify Music Visualizer</h3>
 
         {!isCookie && (
-          <h3>Please log into your Spotify account to use the Visualizer:</h3>
+          <div>
+            <h4>
+              Please log into your Spotify Premium account in order to use the
+              Visualizer:
+            </h4>
+          </div>
         )}
 
+        {isCookie && (
+          <div>
+            <p>Successfully logged into Spotify...</p>
+          </div>
+        )}
         <a className='home-main-button' href='/visualizer'>
           {isCookie ? (
-            <div className='button'>Visualize Your Music</div>
+            <div className='button'>Continue to Player</div>
           ) : (
             <div className='button'>Log In</div>
           )}

@@ -1,5 +1,4 @@
 const request = require('request')
-// const PORT = process.env.PORT || 6868
 
 module.exports = (app) => {
   app.get('/api/authentication/callback', async (req, res) => {
@@ -39,7 +38,7 @@ module.exports = (app) => {
       res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expires: 0 })
       if (process.env.REACT_APP_NODE_ENV === 'production') {
         // res.redirect(process.env.REACT_APP_PROJECT_ROOT)
-        res.redirect('https://spotify-visualz.herokuapp.com/')
+        res.redirect('https://audiolize.herokuapp.com/')
       } else {
         res.redirect('http://localhost:3000')
       }
