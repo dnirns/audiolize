@@ -11,4 +11,4 @@ A React, P5.js and Express.js project that creates a music visualizer as a Spoti
 
 Huge huge thanks to [Zach Winter](https://github.com/zachwinter) for his help on this, there is no way I would have been able to get going without his amazingly generous help. A large proportion of the code used to get me going on this is by his fingers. I will comment this accordingly once the project becomes more complete. 🙌
 
-Work in progress deployment: https://spotify-visualz.herokuapp.com
+Work in progress deployment: https://audiolize.herokuapp.com
