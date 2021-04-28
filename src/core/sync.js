@@ -65,18 +65,14 @@ export default class Sync {
       this.state.accessToken = Cookies.get(process.env.REACT_APP_ACCESS_TOKEN) // eslint-disable-line
       this.state.refreshToken = Cookies.get(process.env.REACT_APP_REFRESH_TOKEN) // eslint-disable-line
     } else {
-      window.location.href = `${process.env.REACT_APP_PROJECT_ROOT}/api/authentication/login`
-      // window.location.href = `http://localhost:${PORT}/api/authentication/login`
-
+      window.location.href = `${process.env.REACT_APP_PROJECT_ROOT}api/authentication/login`
       // eslint-disable-line
     }
   }
 
   async refreshToken(callback = () => {}) {
     const { data } = await axios.get(
-      `${process.env.REACT_APP_PROJECT_ROOT}/api/authentication/refresh?token=${this.state.refreshToken}`
-      // `http://localhost:${PORT}/api/authentication/refresh?token=${this.state.refreshToken}`
-      // `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/refresh?token=${this.state.refreshToken}`
+      `${process.env.REACT_APP_PROJECT_ROOT}api/authentication/refresh?token=${this.state.refreshToken}`
     ) // eslint-disable-line
     this.state.accessToken = data.access_token
     Cookies.set(process.env.REACT_APP_ACCESS_TOKEN, this.state.accessToken, {
