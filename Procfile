@@ -1,2 +1,1 @@
-web: node server/index.js
-web: react-scripts start
+web: node server.index.js
