@@ -13,7 +13,7 @@ module.exports = (app) => {
       form: {
         code: code,
 
-        redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback/`,
+        redirect_uri: process.env.REACT_APP_REDIRECT_URI,
 
         grant_type: 'authorization_code',
       },
@@ -38,7 +38,7 @@ module.exports = (app) => {
       })
       res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expires: 0 })
       if (process.env.REACT_APP_NODE_ENV === 'production') {
-        res.redirect(process.env.REACT_APP_DEPLOY_URL + '/visualizer')
+        res.redirect(process.env.REACT_APP_REDIRECT_URI + '/visualizer')
       } else {
         res.redirect('http://localhost:3000/visualizer')
       }

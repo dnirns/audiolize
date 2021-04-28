@@ -10,7 +10,7 @@ module.exports = (app) => {
       ],
       state: auth_id,
       client_id: process.env.REACT_APP_CLIENT_ID,
-      redirect_uri: `${process.env.REACT_APP_DEPLOY_URL}/api/authentication/callback/`,
+      redirect_uri: process.env.REACT_APP_REDIRECT_URI,
     })
     res.cookie(process.env.REACT_APP_STATE_KEY, auth_id)
     res.redirect('https://accounts.spotify.com/authorize?' + query)
