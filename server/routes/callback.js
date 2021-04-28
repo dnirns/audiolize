@@ -12,7 +12,9 @@ module.exports = (app) => {
       url: 'https://accounts.spotify.com/api/token',
       form: {
         code: code,
+
         redirect_uri: `http://localhost:${PORT}/api/authentication/callback`,
+
         grant_type: 'authorization_code',
       },
       headers: {
@@ -36,7 +38,7 @@ module.exports = (app) => {
       })
       res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expires: 0 })
       if (process.env.REACT_APP_NODE_ENV === 'production') {
-        res.redirect(process.env.REACT_APP_SERVER_URL + '/visualizer')
+        res.redirect(process.env.REACT_APP_DEPLOY_URL + '/visualizer')
       } else {
         res.redirect('http://localhost:3000/visualizer')
       }
