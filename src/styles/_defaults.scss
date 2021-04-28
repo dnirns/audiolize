@@ -23,8 +23,10 @@ a:hover {
 
 .button {
   background-color: $spotify-green;
+
   color: white;
   border: none;
+  border-radius: 2px;
   padding: 0.8em 1.6em;
   margin: 1.2em;
   font-family: 'DotGothic16', sans-serif;

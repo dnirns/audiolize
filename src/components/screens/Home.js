@@ -1,5 +1,5 @@
-import React from 'react'
 import Icon from '../common/Icon'
+import { TiTick } from 'react-icons/ti'
 const isCookie = document.cookie ? true : false
 
 console.log(isCookie)
@@ -8,7 +8,8 @@ const Home = () => {
     <>
       <Icon />
       <div className='container home'>
-        <h3>A Spotify Music Visualizer</h3>
+        <h1 className='title'>AUDIOLIZE</h1>
+        <h3 className='sub-title'>A Spotify Music Visualizer</h3>
 
         {!isCookie && (
           <div>
@@ -20,17 +21,22 @@ const Home = () => {
         )}
 
         {isCookie && (
-          <div>
-            <p>Successfully logged into Spotify...</p>
-          </div>
+          <>
+            <p>
+              Logged in <TiTick className='icon' />
+            </p>
+          </>
         )}
         <a className='home-main-button' href='/visualizer'>
           {isCookie ? (
-            <div className='button'>Continue to Player</div>
+            <div className='button text-fade'>Continue to Player</div>
           ) : (
             <div className='button'>Log In</div>
           )}
         </a>
+        <div className='footnote'>
+          <p> * this site requires cookies to authenticate you with Spotify</p>
+        </div>
       </div>
     </>
   )

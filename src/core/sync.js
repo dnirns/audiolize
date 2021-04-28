@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 6868
 
 export default class Sync {
   constructor({
-    spotifyConnectDeviceName = 'Music Visualizer',
+    spotifyConnectDeviceName = 'AUDIOLIZE',
     playerNamespace = 'SPOTIFY_PLAYER',
     tick = () => {},
     onPlayerInitialized = () => {},

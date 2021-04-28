@@ -20,6 +20,21 @@
   z-index: 2;
 }
 
+.footnote {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  padding: 0px 10px;
+  width: 100%;
+  color: white;
+  font-size: 0.9em;
+}
+
+.title {
+  color: $spotify-green;
+  font-size: 2.5rem;
+}
 .home {
   height: 100vh;
   align-items: center;
@@ -81,4 +96,15 @@
   top: 20px;
   left: 50%;
   margin-left: -40px;
+}
+
+.icon {
+  color: $spotify-green;
+  font-size: 20px;
+  margin: 0;
+  height: auto;
+}
+
+.spotify-text {
+  color: $spotify-green;
 }

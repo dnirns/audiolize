@@ -7,8 +7,8 @@ const Initialize = ({ connected, initialized, playing }) => {
           {initialized && !connected && (
             <>
               <p className='text-fade'>
-                Select 'Music Visualizer' as a Connect device in your Spotify
-                app ...
+                Select '<span className='spotify-text'>AUDIOLIZE</span>' as a
+                Connect device in your Spotify app ...
               </p>
             </>
           )}
