@@ -38,7 +38,8 @@ module.exports = (app) => {
       })
       res.cookie(process.env.REACT_APP_REFRESH_CODE, code, { expires: 0 })
       if (process.env.REACT_APP_NODE_ENV === 'production') {
-        res.redirect(process.env.REACT_APP_PROJECT_ROOT)
+        // res.redirect(process.env.REACT_APP_PROJECT_ROOT)
+        res.redirect('https://https://spotify-visualz.herokuapp.com')
       } else {
         res.redirect('http://localhost:3000')
       }
