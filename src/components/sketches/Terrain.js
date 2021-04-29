@@ -16,28 +16,28 @@ const Terrain = ({ volume, sync }) => {
     const red1 = '#a50505'
     const red2 = '#ff0000'
 
-    // const orange1 = '#ff8400'
+    const orange1 = '#ff8400'
 
     const pink1 = '#ff0059'
     const pink2 = '#ff00cc'
 
     const purple1 = '#bd01da'
-    // const purple2 = '#9201da'
-    // const purple3 = '#5401da'
+    const purple2 = '#9201da'
+    const purple3 = '#5401da'
 
     const blue1 = '#1e01da'
     const blue2 = '#013fda'
     const blue3 = '0175da'
 
-    // const turqouise1 = '#01a7da'
-    // const turqouise2 = '#01d3da'
+    const turqouise1 = '#01a7da'
+    const turqouise2 = '#01d3da'
 
     const green1 = '#01da75'
     const green2 = '#01da3f'
     const green3 = '#66da01'
 
-    // const yellow1 = '#b6da01'
-    // const yellow2 = '#ffff76'
+    const yellow1 = '#b6da01'
+    const yellow2 = '#ffff76'
     // const yellow3 = '#fefea0'
 
     p.setup = function setup() {
@@ -101,31 +101,31 @@ const Terrain = ({ volume, sync }) => {
         : height > 10 && height < 30
         ? (strokeColor = red2)
         : height > 30 && height < 50
-        ? (strokeColor = red2)
+        ? (strokeColor = orange1)
         : height > 50 && height < 70
-        ? (strokeColor = pink1)
+        ? (strokeColor = yellow1)
         : height > 70 && height < 90
-        ? (strokeColor = pink1)
+        ? (strokeColor = yellow2)
         : height > 90 && height < 110
-        ? (strokeColor = pink2)
+        ? (strokeColor = pink1)
         : height > 110 && height < 130
         ? (strokeColor = pink2)
         : height > 130 && height < 150
         ? (strokeColor = purple1)
         : height > 150 && height < 170
-        ? (strokeColor = purple1)
+        ? (strokeColor = purple2)
         : height > 170 && height < 190
-        ? (strokeColor = blue1)
+        ? (strokeColor = purple3)
         : height > 190 && height < 210
-        ? (strokeColor = blue2)
+        ? (strokeColor = blue1)
         : height > 210 && height < 220
         ? (strokeColor = blue2)
         : height > 220 && height < 230
         ? (strokeColor = blue3)
         : height > 230 && height < 250
-        ? (strokeColor = blue3)
+        ? (strokeColor = turqouise1)
         : height > 250 && height < 270
-        ? (strokeColor = green1)
+        ? (strokeColor = turqouise2)
         : height > 270 && height < 280
         ? (strokeColor = green1)
         : height > 280 && height < 290
