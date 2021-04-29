@@ -6,7 +6,7 @@ const Terrain = ({ volume, sync }) => {
     const h = window.innerHeight
     let rows = 0
     let cols = 0
-    const scale = 45
+    const scale = 30
     let terrain = []
     let flyingSpeed = 1
     let tempo = false
@@ -52,8 +52,8 @@ const Terrain = ({ volume, sync }) => {
     }
 
     p.draw = function draw() {
-      let treble = volume.current * 50
-      let bass = volume.current * 70
+      let treble = volume.current * 40
+      let bass = volume.current * 80
 
       //* on each beat change, toggle 'tempo' true / false
 
@@ -70,8 +70,8 @@ const Terrain = ({ volume, sync }) => {
       })
 
       if (tempo) {
-        depth = -bass * 1.8
-        height = treble * 2.2
+        depth = -bass * 2.5
+        height = treble * 3.5
       } else {
         depth = -bass
         height = treble
@@ -79,7 +79,7 @@ const Terrain = ({ volume, sync }) => {
 
       //*alter flyingspeed based on volume level
 
-      flyingSpeed -= volume.current / 12
+      flyingSpeed -= volume.current / 10
 
       let yoff = flyingSpeed
       for (let y = 0; y < rows; y++) {
@@ -135,7 +135,7 @@ const Terrain = ({ volume, sync }) => {
         : (strokeColor = green3)
 
       p.stroke(strokeColor)
-      p.strokeWeight(2)
+      p.strokeWeight(4)
 
       p.fill(0)
 
